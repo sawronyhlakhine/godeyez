@@ -5,6 +5,7 @@ const FILES_TO_CACHE = [
   '/',
   '/index.html',
   '/js/app.js',
+  '/js/install.js',
   '/js/ui.js',
   '/js/materialize.min.js',
   '/css/styles.css',
@@ -57,7 +58,7 @@ self.addEventListener('fetch', (evt) => {
     caches.match(evt.request).then(cacheRes => {
       return cacheRes || fetch(evt.request).then(fetchRes => {
         return caches.open(DYN_CACHE_NAME).then(cache => {
-          cache.put(evt.request.url, fetchRes.clone());
+          // cache.put(evt.request.url, fetchRes.clone());
           // check cached items size
           limitCacheSize(DYN_CACHE_NAME, 15);
           return fetchRes;

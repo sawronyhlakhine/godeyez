@@ -3,8 +3,8 @@
   "short_name": "GodEyez",
   "start_url": "/index.html",
   "display": "standalone",
-  "background_color": "#FFE9D2",
-  "theme_color": "#FFE1C4",
+  "background_color": "#BCAAA4",
+  "theme_color": "#3E2723",
   "orientation": "portrait-primary",
   "icons": [
     {

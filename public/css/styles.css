@@ -1,8 +1,14 @@
 /* colours */
 :root{
-  --primary: #FFE9D2;
-  --secondary: #FFE1C4;
-  --title: #FF8816;
+  --primary: #212121;
+  --secondary: #3E2723;
+  --title: #3E2723;
+  --headtext: #E0E0E0;
+}
+
+html,body {
+  background-color: #FFF;
+  height: fit-content;
 }
 
 /* layout styles */
@@ -12,7 +18,7 @@ nav{
 }
 nav a{
   text-transform: uppercase;
-  color: var(--title);
+  color: var(--headtext);
 }
 nav a span{
   font-weight: bold;
@@ -72,4 +78,101 @@ input{
 }
 form .input-field{
   margin-top: 30px;
+}
+.install-btn{
+  color: #FFF !important;
+  /* margin: 0 10em 0 10em; */
+}
+.install-btn,.install-btn:active, .install-btn:hover {
+  background-color: #303F9F;
+}
+
+/* Header */
+
+#header {
+  background-attachment: scroll,scroll,fixed;
+  background-image: url("./../../img/top-3200.svg"), url("./../../img/overlay1.png"), url("./../../img/header.jpg");
+  background-position: bottom center,top left,center center;
+  background-repeat: repeat-x,repeat,no-repeat;
+  background-size: 3200px 460px,auto,cover;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 7em 0 20em 0;
+  position: relative;
+  text-align: center;
+}
+
+#header:before, #header:after {
+  background: rgba(224, 224, 224, 0.75);
+  content: '';
+  left: 50%;
+  position: absolute;
+  width: 1px;
+  z-index: 0;
+}
+
+#header:before {
+  height: calc(100% - 50px);
+  opacity: 0.15;
+  top: 0;
+}
+
+#header:after {
+  bottom: 0;
+  height: 50px;
+}
+
+#header a {
+  border-bottom-color: rgba(255, 255, 255, 0.35);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+#header a:hover {
+  border-bottom-color: transparent;
+  color: #4eb980;
+}
+
+#header strong, #header b {
+  color: #ffffff;
+}
+
+#header h1, #header h2, #header h3, #header h4, #header h5, #header h6 {
+  color: #ffffff;
+}
+
+#header input[type="submit"],
+#header input[type="reset"],
+#header input[type="button"],
+#header .button {
+  background: #ffffff;
+  color: #544d55;
+}
+
+#header .logo {
+  background: var(--primary);
+  border-radius: 100%;
+  color: #ffffff;
+  cursor: default;
+  display: inline-block;
+  font-size: 2.25em;
+  height: 2.35em;
+  line-height: 2.35em;
+  margin: 0 0 0.75em 0;
+  text-align: center;
+  width: 2.35em;
+}
+
+#header .logo.fa-paper-plane-o:before {
+  left: -0.075em;
+  position: relative;
+}
+
+#header h1 {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+#header p {
+  font-size: 1.5em;
+  line-height: 1.5em;
+  margin: 0.25em 0 0 0;
 }
